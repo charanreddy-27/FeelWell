@@ -106,20 +106,19 @@ Learn about the connection between physical activity and mental well-being, and 
 FeelWell is here to make a positive difference in the lives of people worldwide. Thank you for exploring the platform and contributing to mental health awareness!
 
 ---
+### Final Thoughts
 
-## 📜 **Copyright Notice**
+I believe that everyone deserves to live a balanced, healthy life, and FeelWell is here to be a guiding light on that journey. Together, we can raise awareness and help reduce the stigma surrounding mental health.
+
 
 <p align="center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; color: #4B4B4B;">
-  © 2025 <strong>Charan Reddy</strong>. All rights reserved. Built with ❤️ for mental well-being.
+  © 2025 <strong>Charan Reddy</strong>. All rights reserved.
 </p>
 
 <p align="center" style="font-family: 'Courier New', Courier, monospace; font-size: 16px; color: #8D8D8D;">
   Built with ❤️ for  <strong>mental well-being.</strong>
 </p>
 
----
 
-### Final Thoughts
 
-I believe that everyone deserves to live a balanced, healthy life, and FeelWell is here to be a guiding light on that journey. Together, we can raise awareness and help reduce the stigma surrounding mental health.
 
