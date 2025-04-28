@@ -1,159 +1,124 @@
+# 🌟 **FeelWell** 🌟
 
-# FeelWell.
-This project is a comprehensive web platform providing accessible resources, voice-enabled chatbot support, interactive tools, and games for improving mental health. It shows how important is to look after your mental health and shows some easy ways to maintain mental wellness. 
- ## Project Achievements
-- [Top 20 Projects-Overall (13th rank) | Hack-o-Pitch 2.0 organized by Indian Institute of Technology, Madras](https://www.linkedin.com/posts/activity-7068144866467184640-UE43?utm_source=share&utm_medium=member_desktop)
-* Event website: https://hackopitch.iitmparadox.org/
+FeelWell is an innovative web platform designed to promote mental health and well-being. It combines various tools, resources, and interactive features to provide users with a holistic approach to maintaining mental health.
 
-![WhatsApp Image 2023-05-25 at 12 02 18](https://github.com/charanreddy-27/FeelWell/assets/81246801/d3be7223-0602-4cdd-a963-9a7c73570bad)
+---
 
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Rubik&size=30&duration=4000&color=F76D57&center=true&vCenter=true&multiline=true&width=800&height=80&lines=Promoting+Mental+Health+and+Well-being;A+Holistic+Approach+for+Everyone" alt="Typing SVG">
+</p>
 
+---
 
-# Features
+## 🌟 **Key Features**
 
-* Friendly Chatbot
-* Statistics of Mental Health disorders
-* Nutritions need to maintain mental health
-* Exercise need to maintain mental health
-* Some games to make you feel better
+### 1. **Voice-Enabled Chatbot** 🤖
 
-![Screenshot (92)](https://github.com/charanreddy-27/FeelWell/assets/81246801/f22d9abf-b6bd-4419-8d29-55f3ce54bb0b)
+Engage in meaningful conversations with our voice-enabled chatbot to discuss mental health, ask for advice, or just talk.
 
+- **How to Use:**
+  1. Click on the **Chatbot Menu**.
+  2. Select **Take me there** to access the chatbot.
+  3. Start a conversation by clicking **Start Conversation**.
+  4. Use the **Listen to me** button to speak; the bot will respond.
 
-# How to Use
+---
 
-I made this project witha very user-friendly design, but if you still find any difficulties follow the steps.
+### 2. **Mental Health Statistics** 📊
 
-* Click the Chatbot Menu 
-* Click Take me there button
-* There you can find a chatbot
-* Click "Start Conversation" botton.
-* Click "Listen me" button and,
-* Ask for "Website tour" to Chatbot.
-* Bot will guide you how to use the the platform.
+View detailed statistics about mental health disorders globally. 
 
-![WhatsApp Image 2023-05-25 at 12 02 16](https://github.com/charanreddy-27/FeelWell/assets/81246801/57a227c4-06bc-405d-adbb-e706dd48eec4)
+- **Disorders Included:**
+  - Anxiety Disorders
+  - Depression
+  - Schizophrenia
+  - Bipolar Disorder
+  - Drug Use Disorders
+  - Alcohol Use Disorders
 
-# Chatbot
+- **How to Use:**
+  1. Select a country from the dropdown menu to view statistics for that country.
+  2. Use the **Remove Country** button to clear the last selected country.
 
-Talking openly about what your going through would really help you to reduce the burden. 
+---
 
-### So here is a Voice anabled chatbot you can chat with, 
-It is not trained for all conversation but you can talk some normal conversation.
+### 3. **Interactive Games** 🎮
 
+Two simple, engaging games to uplift your mood:
 
-#### How to use
+- **Block Rider**: Navigate using arrow keys or touch controls.
+- **Blockson**: Jump using the up arrow or by tapping the screen.
 
-* Click "Start Conversation" button. (Bot will greet you).
-* Click "Listen me" button and start speaking once you stop speaking bot will reply.
-* Click "Stop Conversation" to stop the conversation.
+- **How to Access:**
+  1. Click the **STAY HAPPY** card to open the Gaming section.
+  2. Select the game you want to play.
 
+---
 
+### 4. **Nutrition for Mental Health** 🍏
 
-### Technology Used
+Discover how food choices can affect your mental health and learn about the importance of a good diet for a healthy mind.
 
-* [P5.speech](https://idmnyu.github.io/p5.js-speech/)
-* [Rivescript](https://www.rivescript.com/)
+- **How to Navigate:**
+  1. Click the **Explore** button on the main page.
+  2. Select the **Nutrition** card to dive into the topic.
 
-### Prerequisite
+---
 
-* Chrome browser.
-* A device to run that.
+### 5. **Exercise for Mental Health** 🏋️‍♂️
 
+Learn about the connection between physical activity and mental well-being, and discover exercises that can help reduce the risk of mental health issues.
 
-# Statistics
+- **How to Navigate:**
+  1. Click the **Explore** button on the main page.
+  2. Select the **Exercise** card for detailed information.
 
-Here you find statistics of some mental health related disorders.
+---
 
-![WhatsApp Image 2023-05-25 at 12 02 17](https://github.com/charanreddy-27/FeelWell/assets/81246801/e882ad33-1b2d-45ab-812e-848a5142962b)
+## 🛠️ **Technologies Used**
 
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,flask,nextjs,react,azure,postgresql" alt="Tech Stack Icons">
+</p>
 
-#### Disorders added on Statistics
+- **P5.speech**: [Link](https://idmnyu.github.io/p5.js-speech/)
+- **Rivescript**: [Link](https://www.rivescript.com/)
 
-* Anxiety disorders
-* Depression
-* Schizophrenia
-* Bipolar disorder
-* Drug use disorders
-* Alcohol use disorders
+---
 
+## 📜 **Prerequisites**
 
-#### How to use
+- A device with an internet connection.
+- Google Chrome browser for the best experience.
 
-* Select different Countries from Dropdown menu to know the statistics of that country
-* Click "Remove Country" button to remove lastly added country from the chart.
+---
 
+## 🚀 **How to Get Started**
 
+1. **Access the Platform**: Open the platform in your browser.
+2. **Explore Features**: Navigate through the menus to discover the chatbot, statistics, games, nutrition, and exercise sections.
+3. **Enjoy**: Follow on-screen instructions for a seamless user experience.
 
-# Gaming 
+---
 
-A new paper suggests that video games might hold the key to providing affordable, stigma-free mental health
-treatment around the globe.  
-So I added two simple games for users to enjoy..
+## 🙏 **Thank You!**
 
-![Screenshot (98)](https://github.com/charanreddy-27/FeelWell/assets/81246801/13c13ced-b9fc-424f-a766-016d717c57f9)
+FeelWell is here to make a positive difference in the lives of people worldwide. Thank you for exploring the platform and contributing to mental health awareness!
 
-#### How to navigate
+---
+### Final Thoughts
 
-* Click on the "STAY HAPPY" card to open the Gaming section, where you can find two games.
-* Click on the game you want to play.
+I believe that everyone deserves to live a balanced, healthy life, and FeelWell is here to be a guiding light on that journey. Together, we can raise awareness and help reduce the stigma surrounding mental health.
 
-## Games
 
-### Block Rider
+<p align="center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; color: #4B4B4B;">
+  © 2025 <strong>Charan Reddy</strong>. All rights reserved.
+</p>
 
+<p align="center" style="font-family: 'Courier New', Courier, monospace; font-size: 16px; color: #8D8D8D;">
+  Built with ❤️ for  <strong>mental well-being.</strong>
+</p>
 
 
-#### How to play:
-
-* Use Left and Right arrow keys (or) use A and D to move the car.
-* If your using mobile use the two Arrow symbols below to move the car.
-
-![Screenshot (103)](https://github.com/charanreddy-27/FeelWell/assets/81246801/67e79ca8-3b3e-4923-8e57-68beb5f23194)
-
-### Blockson
-
-
-#### How to play:
-
-* Use Up arrow (or) Just click on the screen to jump.
-
-![Screenshot (104)](https://github.com/charanreddy-27/FeelWell/assets/81246801/4f30319a-566e-4a49-b419-dcce87a528a4)
-
-
-# Nutrition for Mental Health
-
-It is also important to understand how food choices affect your brain, Good diet is 
-important for mental health.
-
-#### How to navigate
-
-* Click "Explore" button on main page. (Takes you to the second section).
-* Click on the "Nutrition" card to explore.
-
-![Screenshot (94)](https://github.com/charanreddy-27/FeelWell/assets/81246801/5efaf24b-d772-4e22-8e7d-87f2aa9e866b)
-![Screenshot (95)](https://github.com/charanreddy-27/FeelWell/assets/81246801/6552ee80-f139-4791-a93d-de474b40da84)
-
-
-# Exercise for Mental Health
-
-One study found that increasing your activity levels from doing nothing, to exercising at least three times a week, reduces the risk of depression by up to 30 per cent.
-
-#### How to navigate
-
-* Click "Explore" button on main page. (Takes you to the second section).
-* Click on the "Exercise" card to explore.
-
-![Screenshot (96)](https://github.com/charanreddy-27/FeelWell/assets/81246801/c3d6afef-bce9-442c-9052-0ac389368cb4)
-![Screenshot (97)](https://github.com/charanreddy-27/FeelWell/assets/81246801/b7aa9bd4-e3e3-4558-a16a-fb86673b9289)
-
-
-## Project Workflow
-
-![FeelWell Workflow](https://github.com/charanreddy-27/FeelWell/assets/81246801/2120ad97-e635-4146-ba2e-7be1155fa311)
-
-
-
-#### THANK YOU 
 
 
