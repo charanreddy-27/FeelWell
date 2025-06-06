@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Bot</title>
+    <title>Chat Bot | FeelWell</title>
 
- 
     <link rel="icon" href="../Images/B_icon01.png">
-
-
     <link rel="stylesheet" href="../otherStylesheet/common.css">
     <link rel="stylesheet" href="../otherStylesheet/chatBot.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-
-
     <div class="header">
         <div class="logo-cantainer">
             <h2 class="logo">FeelWell.</h2>
@@ -25,13 +21,12 @@
         <div class="nav-and-btn-cont">
             <div class="nav-list-cont">
                 <ul class="nav-ul">
-                    <li><a href="../index.html" >HOME</a></li>
+                    <li><a href="../index.html">HOME</a></li>
                     <li><a href="statistics.html">STATISTICS</a></li>
                     <li><a href="#FOOTER">CONTACT</a></li>
                 </ul>
             </div>
             
-
             <div class="hamBurger">
                 <diV class="line line1"></diV>
                 <div class="mid-line-cont">
@@ -41,75 +36,66 @@
                 <diV class="line line3"></diV>
             </div>
         </div>
-
     </div>
 
     <div class="mobile-view-nav-cont" id="mobile-nav">
-
         <div class="mobile-view-nav-head">
             <p>Menu</p>
         </div>
 
         <div class="mobile-view-nav-list">
-
             <ul>
-                <li ><a href="../index.html" class="mobile-view-list">HOME</a></li>
-                <li ><a href="statistics.html" class="mobile-view-list">STATISTICS</a></li>
-                <li ><a href="#FOOTER" class="mobile-view-list">CONTACT</a></li>
+                <li><a href="../index.html" class="mobile-view-list">HOME</a></li>
+                <li><a href="statistics.html" class="mobile-view-list">STATISTICS</a></li>
+                <li><a href="#FOOTER" class="mobile-view-list">CONTACT</a></li>
             </ul>
-
         </div>
-
     </div>
-
-
 
     <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
     +++++++++++                   CHAT-BOT                        ++++++++++
     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
-
     <div class="back-to-home">
-       <a href="../index.html"> <h1><i class="fas fa-long-arrow-alt-right back-to-home-arrow"></i></h1></a>
+       <a href="../index.html"><i class="fas fa-arrow-left back-to-home-arrow"></i> Back to Home</a>
     </div>
 
-
     <div class="whole-bot-cont">
-
-
-
         <div class="the-head">
-            <p>Im Here for you  &#60;3</p>
+            <h2>I'm Here for You <span>&#60;3</span></h2>
+            <p>Talk to me about anything that's on your mind</p>
         </div>
 
-
         <div class="bot-cont">
-
             <div class="bot-img-cont">
+                <img src="../Images/illustration/home-bot-img.png" alt="Chat Bot" class="bot-image">
+            </div>
 
+            <div class="chat-interface">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot-message">
+                        <p>Hello! I'm here to listen and chat with you. How are you feeling today?</p>
+                    </div>
+                </div>
+                
+                <div class="user-input-area">
+                    <p class="user-speech"></p>
+                    <p class="listening-text">Listening...</p>
+                </div>
             </div>
 
             <div class="bot-page-btns">
-
                 <div class="start-convo-btn-cont">
                     <button class="start-convo-btn btn">Start Conversation</button>
                 </div>
 
                 <div class="other-btn-cont">
-                    <button class="speak-btn btn">Listen me</button>
-                    <button class="stop-convo-btn btn">Stop Conversation</button>
+                    <button class="speak-btn btn">Listen to me</button>
+                    <button class="stop-convo-btn btn">End Conversation</button>
                 </div>
-
             </div>
-            
-            <p class="listening-text">Listening...</p>
-
-            <p class="user-speech"></p>
-
         </div>
-
     </div>
-
 
     <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
     +++++++++++                   FOOTER                         +++++++++++ 
@@ -120,7 +106,6 @@
         <div class="footer-text-cont">
             <h2>GET IN TOUCH.</h2>
             <P>I would love to hear from you friend &#60;3</P>
-            <!-- <button class="support-btn">Buy me a Coffee</button> -->
         </div>
 
         <div class="social-icon-cont">
@@ -130,49 +115,35 @@
 
             <div class="icons">
                 <ul>
-                    <li><a href="https://github.com/charanreddy-27"><i class="fab fa-github-square"></i></a></li>
-                    <li><a <a href="https://mail.google.com/mail/?view=cm&fs=1&to=charanreddychanda@gmail.com" target="_blank">
-  <i class="far fa-envelope"></i>
-</a>
-
+                    <li><a href="https://github.com/charanreddy-27" target="_blank"><i class="fab fa-github-square"></i></a></li>
+                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=charanreddychanda@gmail.com" target="_blank"><i class="far fa-envelope"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/chandacharanreddy/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>
 
- 
         <p class="copy-rights">Thank You :)</p>
-
     </div>
 
-
-
-
-
-       <!--++++++++++++++++++++ Jquery ++++++++++++++ -->
-
+    <!--++++++++++++++++++++ Jquery ++++++++++++++ -->
     <script
        src="https://code.jquery.com/jquery-3.6.0.js"
        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
        crossorigin="anonymous">
-   </script>
+    </script>
 
-   <!-- +++++++++++++++ FONT AWEWSOME CDN +++++++++++++ -->
-   <script src="https://kit.fontawesome.com/1b2b6a64da.js" crossorigin="anonymous"></script>
+    <!-- +++++++++++++++ FONT AWEWSOME CDN +++++++++++++ -->
+    <script src="https://kit.fontawesome.com/1b2b6a64da.js" crossorigin="anonymous"></script>
 
+    <!-- +++++++++++++++++ RIVE SCRIPT  +++++++++++++++++++++++ -->
+    <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
 
-   <!-- +++++++++++++++++ RIVE SCRIPT  +++++++++++++++++++++++ -->
+    <!-- ++++++++++++++++++ P5 JS CDN ++++++++++++++++++++++++++++++ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/addons/p5.dom.js"></script>
 
-   <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
-
-   <!-- ++++++++++++++++++ P5 JS CDN ++++++++++++++++++++++++++++++ -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/p5.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/addons/p5.dom.js"></script>
-
-   <script src="../library/p5.speech.js"></script>
-
-   <script src="../otherJS/hamberger.js"></script>
-   <script src="../otherJS/chatBot.js"></script>
-
+    <script src="../library/p5.speech.js"></script>
+    <script src="../otherJS/hamberger.js"></script>
+    <script src="../otherJS/chatBot.js"></script>
 </body>
 </html>
