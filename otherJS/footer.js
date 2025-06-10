@@ -160,40 +160,82 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Animate footer heading
-        const footerHeading = document.querySelector('.footer-heading');
-        const headingUnderline = document.querySelector('.heading-underline');
+        // Function to animate the footer heading
+        function animateFooterHeading() {
+            const footerHeading = document.querySelector('.footer-heading');
+            const headingUnderline = document.querySelector('.heading-underline');
+            
+            if (footerHeading && headingUnderline) {
+                // Animate the heading underline
+                headingUnderline.style.animation = 'underlineExpand 0.8s ease-out forwards';
+                
+                // Get the original text content
+                const originalText = footerHeading.innerHTML;
+                
+                // Create a temporary div to parse HTML
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = originalText;
+                
+                // Get text content
+                let textContent = '';
+                let accentText = '';
+                
+                // Check if there's an accent-text span
+                const accentSpan = tempDiv.querySelector('.accent-text');
+                if (accentSpan) {
+                    accentText = accentSpan.textContent;
+                    textContent = originalText.replace(`<span class="accent-text">${accentText}</span>`, '');
+                } else {
+                    textContent = originalText;
+                }
+                
+                // Clear the heading
+                footerHeading.innerHTML = '';
+                
+                // Add each letter with animation
+                [...textContent].forEach((letter, index) => {
+                    const span = document.createElement('span');
+                    span.textContent = letter;
+                    span.style.display = 'inline-block';
+                    span.style.opacity = '0';
+                    span.style.transform = 'translateY(20px)';
+                    span.style.animation = `letterFadeIn 0.5s forwards ${0.05 * index}s`;
+                    footerHeading.appendChild(span);
+                });
+                
+                // If there was an accent text, add it back with its own animation
+                if (accentText) {
+                    const accentSpan = document.createElement('span');
+                    accentSpan.className = 'accent-text';
+                    
+                    [...accentText].forEach((letter, index) => {
+                        const letterSpan = document.createElement('span');
+                        letterSpan.textContent = letter;
+                        letterSpan.style.display = 'inline-block';
+                        letterSpan.style.opacity = '0';
+                        letterSpan.style.transform = 'translateY(20px)';
+                        letterSpan.style.animation = `letterFadeIn 0.5s forwards ${0.05 * (textContent.length + index)}s`;
+                        accentSpan.appendChild(letterSpan);
+                    });
+                    
+                    footerHeading.appendChild(accentSpan);
+                }
+            }
+        }
         
-        if (footerHeading && headingUnderline) {
-            // Create intersection observer for footer heading
-            const footerHeadingObserver = new IntersectionObserver((entries) => {
+        // Use Intersection Observer to trigger animation when footer is visible
+        const footerHeadingContainer = document.querySelector('.footer-heading-container');
+        if (footerHeadingContainer) {
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Animate the heading underline
-                        headingUnderline.style.animation = 'underlineExpand 0.8s ease-out forwards 0.5s';
-                        
-                        // Animate each letter in the heading
-                        const headingText = footerHeading.textContent;
-                        footerHeading.textContent = '';
-                        
-                        // Split the text and create spans for each letter
-                        [...headingText].forEach((letter, index) => {
-                            const span = document.createElement('span');
-                            span.textContent = letter;
-                            span.style.display = 'inline-block';
-                            span.style.opacity = '0';
-                            span.style.transform = 'translateY(20px)';
-                            span.style.animation = `letterFadeIn 0.5s forwards ${0.05 * index}s`;
-                            footerHeading.appendChild(span);
-                        });
-                        
-                        // Unobserve after animation
-                        footerHeadingObserver.unobserve(entry.target);
+                        animateFooterHeading();
+                        observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.5 });
+            }, { threshold: 0.1 });
             
-            footerHeadingObserver.observe(footerHeading);
+            observer.observe(footerHeadingContainer);
         }
         
         // Contact form animation and functionality
@@ -273,4 +315,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-}); 
+});
