@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Food</title>
+    <title>Nutrition | FeelWell</title>
 
-    <script src="https://kit.fontawesome.com/1b2b6a64da.js" crossorigin="anonymous"></script>
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+    <link rel="preconnect" href="https://unpkg.com">
 
     <link rel="icon" href="../Images/feelwelllogo.png">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../otherStylesheet/common.css">
-    <link rel="stylesheet" href="../otherStylesheet/food.css">
+    <link rel="stylesheet" href="../otherStylesheet/food-new.css">
 
+    <script src="https://kit.fontawesome.com/1b2b6a64da.js" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 </head>
 <body>
-
-
     <div class="land-cont">
-
-           <!-- +++ HEADER +++ -->
-
-           <div class="header">
+        <!-- +++ HEADER +++ -->
+        <div class="header">
             <div class="logo-cantainer">
                 <h2 class="logo">FeelWell.</h2>
             </div>
@@ -29,19 +31,13 @@
             <div class="nav-and-btn-cont">
                 <div class="nav-list-cont">
                     <ul class="nav-ul">
-                        <li><a href="../index.html" >HOME</a></li>
+                        <li><a href="../index.html">HOME</a></li>
                         <li><a href="#FOODS">FOODS</a></li>
                         <li><a href="#FOOTER">CONTACT</a></li>
                     </ul>
                 </div>
 
-    
-
                 <div class="hamBurger">
-                    <!-- <div class="lines line1"></div>
-                    <div class="lines line2"></div>
-                    <div class="lines line2 mid-line"></div>
-                    <div class="lines line3"></div> -->
                     <diV class="line line1"></diV>
                     <div class="mid-line-cont">
                         <div class="line mid-line1"></div>
@@ -50,42 +46,41 @@
                     <diV class="line line3"></diV>
                 </div>
             </div>
-
         </div>
 
         <div class="mobile-view-nav-cont" id="mobile-nav">
-
             <div class="mobile-view-nav-head">
                 <p>Menu</p>
             </div>
 
             <div class="mobile-view-nav-list">
-
                 <ul>
-                    <li class="mobile-view-list"><a href="../index.html" >HOME</a></li>
+                    <li class="mobile-view-list"><a href="../index.html">HOME</a></li>
                     <li class="mobile-view-list"><a href="#FOODS">FOODS</a></li>
                     <li class="mobile-view-list"><a href="#FOOTER">CONTACT</a></li>
                 </ul>
-
             </div>
-
         </div>
 
         <div class="land-img-cont">
-            <div class="food-page-head">
-                <h2>Eat Well for <span> Mental Health</span></h2>
+            <div class="food-icons-container"></div>
+            <div class="food-page-head" data-aos="fade-up" data-aos-duration="1000">
+                <h2>Eat Well for <span>Mental Health</span></h2>
+                <div class="animated-underline"></div>
+                <a href="#FOODS" class="scroll-down-btn">
+                    <span>Discover</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
         </div>
-
     </div>
 
     <div class="section-2">
-        
-        <div class="section-2-para">
-            <p>When planning out a healthy diet, it’s common to focus on foods geared toward weight loss.
-                 While smart caloric intake is vital to overall health, it’s also important to understand 
+        <div class="section-2-para" data-aos="fade-up">
+            <p>When planning out a healthy diet, it's common to focus on foods geared toward weight loss.
+                 While smart caloric intake is vital to overall health, it's also important to understand 
                  how food choices affect your brain. By integrating many of the foods on this list into your diet,
-                not only will you see positive results in your waistline, but you’ll also improve brain function — 
+                not only will you see positive results in your waistline, but you'll also improve brain function — 
                 and potentially help fight cognitive diseases as well.
             </p>
 
@@ -93,40 +88,91 @@
                 Conversely, an inadequate diet can lead to fatigue, impaired decision-making, and can slow down reaction time.
                  In fact, a poor diet can actually aggravate, and may even lead to, stress and depression.
             </p>
+        </div>
 
+        <div class="nutrition-facts-container" data-aos="fade-up" data-aos-delay="100">
+            <h3>Nutrition & Mental Health Facts</h3>
+            <div class="nutrition-facts-grid">
+                <div class="nutrition-fact-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="nutrition-fact-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>Brain Function</h4>
+                    <p>Your brain requires a constant supply of nutrients to function optimally and regulate mood</p>
+                </div>
+                <div class="nutrition-fact-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="nutrition-fact-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>Energy Levels</h4>
+                    <p>Proper nutrition ensures stable blood sugar and sustained energy throughout the day</p>
+                </div>
+                <div class="nutrition-fact-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="nutrition-fact-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Mood Regulation</h4>
+                    <p>Certain foods contain compounds that help produce mood-regulating neurotransmitters</p>
+                </div>
+                <div class="nutrition-fact-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="nutrition-fact-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Stress Resilience</h4>
+                    <p>Proper nutrition helps your body better cope with stress and anxiety</p>
+                </div>
+            </div>
         </div>
 
         <a id="FOODS"></a>
         <div class="whole-food-div">
-
-            <div class="food-list-head">
-                <h2>Here are some list of foods helps to boost your <span>Mental health.</span> </h2>
+            <div class="food-list-head" data-aos="fade-up">
+                <h2>Here are some list of foods helps to boost your <span>Mental health.</span></h2>
+                <div class="animated-underline"></div>
             </div>
 
             <div class="list-of-food">
-
-                <div class="food-cont">
-
-                    <div class="container-img img-1"></div>
+                <div class="food-cont" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="container-img img-1">
+                        <div class="food-overlay">
+                            <div class="overlay-content">
+                                <h3>Salmon</h3>
+                                <p>Rich in omega-3 fatty acids</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="food-desp">
                         <h2>Salmon</h2>
+                        <div class="food-tag">Omega-3 • Vitamin D • Protein</div>
                         <p>While fish, in general, is a healthy choice, salmon is at the top of the list.
-                             It’s a “fatty” fish, containing high amounts of omega-3 fatty acids, which have been linked to a 
+                             It's a "fatty" fish, containing high amounts of omega-3 fatty acids, which have been linked to a 
                              reduction in mental disorders such as depression. Omega-3s have been shown to boost learning and memory as well.
 
                             Salmon also has a naturally high-occurring amount of vitamin D, which is often added to foods and has been linked to lower rates of depression. 
                             Other types of fish with high Omega-3 counts include tuna, mackerel, and herring.
                         </p>
+                        <div class="food-benefits">
+                            <span><i class="fas fa-check-circle"></i> Reduces depression</span>
+                            <span><i class="fas fa-check-circle"></i> Boosts memory</span>
+                            <span><i class="fas fa-check-circle"></i> Improves mood</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="food-cont rev">
-
-                    <div class="container-img img-2 side"></div>
+                <div class="food-cont rev" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="container-img img-2 side">
+                        <div class="food-overlay">
+                            <div class="overlay-content">
+                                <h3>Whole Grains</h3>
+                                <p>Complex carbohydrates for energy</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="food-desp">
                         <h2>Grains</h2>
+                        <div class="food-tag">Complex Carbs • Fiber • B Vitamins</div>
                         <p>
                             Many types of food fall under this category, like beans, soy, oats and wild rice. 
                             While your body and brain utilize carbohydrates for energy, too often we consume simple carbs,
@@ -137,45 +183,80 @@
                             with foods like chicken and turkey, you can further reduce symptoms of depression and anxiety while
                              boosting brain function.
                         </p>
+                        <div class="food-benefits">
+                            <span><i class="fas fa-check-circle"></i> Stable energy</span>
+                            <span><i class="fas fa-check-circle"></i> Reduces anxiety</span>
+                            <span><i class="fas fa-check-circle"></i> Improves focus</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="food-cont">
-
-                    <div class="container-img img-3"></div>
+                <div class="food-cont" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="container-img img-3">
+                        <div class="food-overlay">
+                            <div class="overlay-content">
+                                <h3>Avocados</h3>
+                                <p>Healthy fats for brain health</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="food-desp">
                         <h2>Avocados</h2>
+                        <div class="food-tag">Healthy Fats • Vitamin K • Folate</div>
                         <p>
                             Avocados are full of vitamin K and folate, which help protect your brain against stroke.
                              They also provide a boost to your memory and concentration.
 
                             Avocados serve up a high dose of lutein, too, which studies have linked to improved brain function.
                         </p>
+                        <div class="food-benefits">
+                            <span><i class="fas fa-check-circle"></i> Improves memory</span>
+                            <span><i class="fas fa-check-circle"></i> Enhances concentration</span>
+                            <span><i class="fas fa-check-circle"></i> Brain protection</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="food-cont rev">
-
-                    <div class="container-img img-4 side"></div>
+                <div class="food-cont rev" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="container-img img-4 side">
+                        <div class="food-overlay">
+                            <div class="overlay-content">
+                                <h3>Spinach</h3>
+                                <p>Leafy greens rich in nutrients</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="food-desp">
                         <h2>Spinach</h2>
+                        <div class="food-tag">Folic Acid • Antioxidants • Iron</div>
                         <p>
                             Spinach and other leafy greens provide your brain with solid amounts of folic acid,
                              which has been shown to be a great deterrent to depression. It also helps fight off insomnia,
                               which is heavily linked to mental impairments and can help reduce dementia in older adults.
-
                         </p>
+                        <div class="food-benefits">
+                            <span><i class="fas fa-check-circle"></i> Fights depression</span>
+                            <span><i class="fas fa-check-circle"></i> Improves sleep</span>
+                            <span><i class="fas fa-check-circle"></i> Cognitive protection</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="food-cont">
-
-                    <div class="container-img img-5"></div>
+                <div class="food-cont" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="container-img img-5">
+                        <div class="food-overlay">
+                            <div class="overlay-content">
+                                <h3>Yogurt</h3>
+                                <p>Probiotics for gut-brain health</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="food-desp">
                         <h2>Yogurt</h2>
+                        <div class="food-tag">Probiotics • Protein • Calcium</div>
                         <p>
                             Yogurt and other products containing active cultures are excellent sources of probiotics. 
                             Often associated with digestive health, probiotics have been shown to play a role in reducing stress and anxiety.
@@ -183,132 +264,206 @@
                             Yogurt can also provide you with potassium and magnesium, which helps oxygen reach the brain,
                              further improving its ability to function.
                         </p>
+                        <div class="food-benefits">
+                            <span><i class="fas fa-check-circle"></i> Reduces stress</span>
+                            <span><i class="fas fa-check-circle"></i> Improves gut health</span>
+                            <span><i class="fas fa-check-circle"></i> Brain oxygenation</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="food-cont rev">
-
-                    <div class="container-img img-6 side"></div>
+                <div class="food-cont rev" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="container-img img-6 side">
+                        <div class="food-overlay">
+                            <div class="overlay-content">
+                                <h3>Nuts</h3>
+                                <p>Healthy fats and protein</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="food-desp">
                         <h2>Nuts</h2>
+                        <div class="food-tag">Omega-3 • Antioxidants • Vitamin E</div>
                         <p>
                             Like salmon, nuts are an excellent source of omega-3 fatty acids, helping to fight depression. 
                             Cashews, for example, help provide oxygen to the brain with a dose of magnesium.
 
                             Almonds contain a compound called phenylalanine, which is shown to help the brain produce 
                             dopamine and other neurotransmitters that boost your mood. Phenylalanine has also been linked 
-                            to a reduction in the symptoms of Parkinson’s Disease.
+                            to a reduction in the symptoms of Parkinson's Disease.
                         </p>
+                        <div class="food-benefits">
+                            <span><i class="fas fa-check-circle"></i> Mood enhancement</span>
+                            <span><i class="fas fa-check-circle"></i> Brain oxygenation</span>
+                            <span><i class="fas fa-check-circle"></i> Neurotransmitter support</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="food-cont">
-
-                    <div class="container-img img-7"></div>
+                <div class="food-cont" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="container-img img-7">
+                        <div class="food-overlay">
+                            <div class="overlay-content">
+                                <h3>Olive Oil</h3>
+                                <p>Healthy fats and antioxidants</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="food-desp">
                         <h2>Olive Oil</h2>
+                        <div class="food-tag">Polyphenols • Monounsaturated Fats • Antioxidants</div>
                         <p>
                             Pure, extra virgin olive oil has been quite popular as of late as a part of healthy Mediterranean-style 
                             diets. This type of oil contains polyphenols, which help to remove the effects of proteins linked to 
-                            Alzheimer’s Disease. It can also help improve learning and memory.
+                            Alzheimer's Disease. It can also help improve learning and memory.
 
                             Be careful when shopping for olive oil, however. Many brands liberally cut their product with 
                             vegetable or seed oils, significantly reducing its brain health benefits. Research brands online to 
                             find brands tested to ensure they contain pure olive oil.
                         </p>
+                        <div class="food-benefits">
+                            <span><i class="fas fa-check-circle"></i> Cognitive protection</span>
+                            <span><i class="fas fa-check-circle"></i> Improves memory</span>
+                            <span><i class="fas fa-check-circle"></i> Anti-inflammatory</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="food-cont rev">
-
-                    <div class="container-img img-8 side"></div>
+                <div class="food-cont rev" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="container-img img-8 side">
+                        <div class="food-overlay">
+                            <div class="overlay-content">
+                                <h3>Tomatoes</h3>
+                                <p>Rich in lycopene</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="food-desp">
                         <h2>Tomatoes</h2>
+                        <div class="food-tag">Lycopene • Antioxidants • Vitamin C</div>
                         <p>
-                            The source of a tomato’s red hue, lycopene is classified as an all-around beneficial 
+                            The source of a tomato's red hue, lycopene is classified as an all-around beneficial 
                             phytonutrient. One of the many health boosts it provides is in the fight against brain 
-                            disease. It’s been shown to delay the onset and progression of Alzheimer’s Disease, fighting
+                            disease. It's been shown to delay the onset and progression of Alzheimer's Disease, fighting
                              off cell damage.
 
                             In addition, lycopene has been shown to help with memory, attention, logic and concentration.
                         </p>
+                        <div class="food-benefits">
+                            <span><i class="fas fa-check-circle"></i> Cognitive protection</span>
+                            <span><i class="fas fa-check-circle"></i> Improves memory</span>
+                            <span><i class="fas fa-check-circle"></i> Enhances concentration</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="food-cont">
-
-                    <div class="container-img img-9"></div>
+                <div class="food-cont" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="container-img img-9">
+                        <div class="food-overlay">
+                            <div class="overlay-content">
+                                <h3>Chicken</h3>
+                                <p>Lean protein source</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="food-desp">
                         <h2>Chicken</h2>
+                        <div class="food-tag">Lean Protein • Tryptophan • B Vitamins</div>
                         <p>
                             Chicken, like turkey, is a delicious lean-protein choice containing the amino acid tryptophan.
-                             Though it’s often associated with post-Thanksgiving naps, this substance doesn’t actually knock 
+                             Though it's often associated with post-Thanksgiving naps, this substance doesn't actually knock 
                              you out as urban legends go, but it does help your body produce serotonin — which is vital in
-                              helping your brain manage your mood, fight depression and help maintain strong memory.
+                              helping regulate your mood.
+
+                            Chicken also contains the B vitamins niacin and B-6. Niacin is particularly important for
+                             converting food to energy and metabolizing fat, protein and carbohydrates.
                         </p>
+                        <div class="food-benefits">
+                            <span><i class="fas fa-check-circle"></i> Mood regulation</span>
+                            <span><i class="fas fa-check-circle"></i> Energy production</span>
+                            <span><i class="fas fa-check-circle"></i> Protein for brain health</span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="food-cont rev">
-
-                    <div class="container-img img-10 side"></div>
-
-                    <div class="food-desp">
-                        <h2>Dark Chocolate</h2>
-                        <p>
-                            Could this be the best news on the list? Dark chocolate is categorized as such due to 
-                            its cocoa content, which you won’t find in milk chocolate. And the darker the better — 85% cocoa
-                             or more is the most beneficial.
-
-                            Dark chocolate contains high levels of flavonoids, a type of antioxidant.
-                             It has been shown to boost attention and memory, enhance mood and help fight cognitive
-                              decline in older adults. Just remember, chocolate should still be consumed in moderation.
-                        </p>
-                    </div>
-                </div>
-
             </div>
+        </div>
 
+        <div class="meal-plan-section" data-aos="fade-up">
+            <h3>Ready to improve your mental health through nutrition?</h3>
+            <p>Get a personalized meal plan designed to boost your mood and cognitive function</p>
+            <a href="#" class="meal-plan-btn">Get Meal Plan <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
-
-
-    
-    <!-- ++++++++++++++++++++++ FOOTER ++++++++++++++++++++++++++ -->
 
     <a id="FOOTER"></a>
-    <div class="footer">
-        <div class="footer-text-cont">
-            <h2>Get in touch.</h2>
-            <P>I would love to hear from you friend &#60;3</P>
+    <!-- Footer will be included from the main page -->
 
-        </div>
-
-        <div class="social-icon-cont">
-            <div class="social-head">
-                <h2 class="logo footer-logo">FeelWell.</h2>
-            </div>
-
-            <div class="icons">
-                <ul>
-                    <li><a href="https://github.com/charanreddy-27"><i class="fab fa-github-square"></i></a></li>
-                    <li><a <a href="https://mail.google.com/mail/?view=cm&fs=1&to=charanreddychanda@gmail.com" target="_blank">
-  <i class="far fa-envelope"></i>
-</a>
-
-                    <li><a href="https://www.linkedin.com/in/chandacharanreddy/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            </div>
-        </div>
-
-        <p class="copy-rights">Thank You :)</p>
-    </div>
-
-    <script src="../otherJS/hamberger.js"></script>
-    <script src="../otherJS/food&exercise.js"></script>
-    
+    <script src="../otherJS/hamberger.js" defer></script>
+    <script src="../otherJS/food&exercise.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+            
+            // Create floating food icons
+            createFoodIcons();
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+        
+        function createFoodIcons() {
+            const foodIconsContainer = document.querySelector('.food-icons-container');
+            const foodIcons = [
+                'fas fa-apple-alt',
+                'fas fa-carrot',
+                'fas fa-fish',
+                'fas fa-egg',
+                'fas fa-bread-slice',
+                'fas fa-cheese',
+                'fas fa-lemon',
+                'fas fa-pepper-hot',
+                'fas fa-seedling',
+                'fas fa-leaf'
+            ];
+            
+            const iconCount = 20;
+            
+            for (let i = 0; i < iconCount; i++) {
+                const icon = document.createElement('i');
+                // Random icon from the array
+                icon.className = `food-icon ${foodIcons[i % foodIcons.length]}`;
+                
+                // Random position, size and animation delay
+                const size = Math.random() * 20 + 10;
+                const top = Math.random() * 100;
+                const left = Math.random() * 100;
+                
+                icon.style.fontSize = `${size}px`;
+                icon.style.top = `${top}%`;
+                icon.style.left = `${left}%`;
+                icon.style.animationDelay = `${Math.random() * 5}s`;
+                icon.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                
+                foodIconsContainer.appendChild(icon);
+            }
+        }
+    </script>
 </body>
 </html>

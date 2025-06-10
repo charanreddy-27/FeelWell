@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Bot | FeelWell</title>
 
-    <link rel="icon" href="../Images/feelwelllogo.png">
-    <link rel="stylesheet" href="../otherStylesheet/common.css">
-    <link rel="stylesheet" href="../otherStylesheet/chatBot.css">
+    <!-- Preconnect to external domains for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="icon" href="../Images/feelwelllogo.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../otherStylesheet/common.css">
+    <link rel="stylesheet" href="../otherStylesheet/chatBot-new.css">
+    <script src="https://kit.fontawesome.com/1b2b6a64da.js" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -61,12 +68,12 @@
     </div>
 
     <div class="whole-bot-cont">
-        <div class="the-head">
+        <div class="the-head" data-aos="fade-up" data-aos-duration="1000">
             <h2>I'm Here for You <span>&#60;3</span></h2>
             <p>Talk to me about anything that's on your mind</p>
         </div>
 
-        <div class="bot-cont">
+        <div class="bot-cont" data-aos="fade-up" data-aos-delay="200">
             <div class="bot-img-cont">
                 <img src="../Images/illustration/home-bot-img.png" alt="Chat Bot" class="bot-image">
             </div>
@@ -83,16 +90,16 @@
                     <p class="listening-text">Listening...</p>
                 </div>
             </div>
+        </div>
 
-            <div class="bot-page-btns">
-                <div class="start-convo-btn-cont">
-                    <button class="start-convo-btn btn">Start Conversation</button>
-                </div>
+        <div class="bot-page-btns" data-aos="fade-up" data-aos-delay="300">
+            <div class="start-convo-btn-cont">
+                <button class="start-convo-btn btn">Start Conversation</button>
+            </div>
 
-                <div class="other-btn-cont">
-                    <button class="speak-btn btn">Listen to me</button>
-                    <button class="stop-convo-btn btn">End Conversation</button>
-                </div>
+            <div class="other-btn-cont">
+                <button class="speak-btn btn">Listen to me</button>
+                <button class="stop-convo-btn btn">End Conversation</button>
             </div>
         </div>
     </div>
@@ -132,10 +139,7 @@
        crossorigin="anonymous">
     </script>
 
-    <!-- +++++++++++++++ FONT AWEWSOME CDN +++++++++++++ -->
-    <script src="https://kit.fontawesome.com/1b2b6a64da.js" crossorigin="anonymous"></script>
-
-    <!-- +++++++++++++++++ RIVE SCRIPT  +++++++++++++++++++++++ -->
+    <!-- +++++++++++++++ RIVE SCRIPT  +++++++++++++++++++++++ -->
     <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
 
     <!-- ++++++++++++++++++ P5 JS CDN ++++++++++++++++++++++++++++++ -->
@@ -145,5 +149,60 @@
     <script src="../library/p5.speech.js"></script>
     <script src="../otherJS/hamberger.js"></script>
     <script src="../otherJS/chatBot.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+            
+            // Add typing animation to bot messages
+            function addTypingAnimation() {
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'message bot-message typing';
+                
+                for (let i = 0; i < 3; i++) {
+                    const dot = document.createElement('span');
+                    typingDiv.appendChild(dot);
+                }
+                
+                document.getElementById('chat-messages').appendChild(typingDiv);
+                
+                // Scroll to bottom
+                const chatMessages = document.getElementById('chat-messages');
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                return typingDiv;
+            }
+            
+            // Remove typing animation
+            function removeTypingAnimation(element) {
+                if (element && element.parentNode) {
+                    element.parentNode.removeChild(element);
+                }
+            }
+            
+            // Override the original addBotMessage function
+            const originalAddBotMessage = window.addBotMessage;
+            if (originalAddBotMessage) {
+                window.addBotMessage = function(message) {
+                    const typingIndicator = addTypingAnimation();
+                    
+                    // Simulate typing delay
+                    setTimeout(() => {
+                        removeTypingAnimation(typingIndicator);
+                        originalAddBotMessage(message);
+                        
+                        // Scroll to bottom
+                        const chatMessages = document.getElementById('chat-messages');
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                    }, 1500);
+                };
+            }
+        });
+    </script>
 </body>
 </html>

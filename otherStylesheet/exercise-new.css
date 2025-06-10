@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-
+/* Exercise Page Styling */
 :root {
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
@@ -552,4 +550,4 @@
     .start-today-section h3 {
         font-size: 1.6rem;
     }
-}
+} 
