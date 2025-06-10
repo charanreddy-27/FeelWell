@@ -271,25 +271,154 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Attribution container in footer with improved animation
-    const attributeText = document.querySelector('.attribute-text');
-    const attributeCont = document.querySelector('.actual-author-contribution-cont');
-    const cross = document.querySelector('.cross');
+    // +++++++++++++++++++++++ FOOTER ANIMATIONS AND FUNCTIONALITY ++++++++++++++++++++++++++
     
-    if (attributeText && attributeCont) {
-        attributeText.addEventListener('click', () => {
-            attributeCont.style.top = "50px";
-            attributeCont.style.opacity = "1";
-            attributeCont.style.transform = "translateX(-50%) scale(1)";
-            attributeCont.style.transition = "all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+    // Set current year in copyright
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+    
+    // Create floating icons in the footer
+    const footerIconsContainer = document.querySelector('.footer-floating-icons-container');
+    if (footerIconsContainer) {
+        // Define icon classes to use
+        const iconClasses = [
+            'fas fa-brain',
+            'fas fa-heart',
+            'fas fa-smile',
+            'fas fa-comment',
+            'fas fa-running',
+            'fas fa-apple-alt',
+            'fas fa-sun',
+            'fas fa-water',
+            'fas fa-leaf',
+            'fas fa-moon',
+            'fas fa-seedling',
+            'fas fa-cloud',
+            'fas fa-spa',
+            'fas fa-heartbeat',
+            'fas fa-hands-helping'
+        ];
+        
+        // Create 15 random floating icons
+        for (let i = 0; i < 15; i++) {
+            const icon = document.createElement('i');
+            // Random icon from the array
+            icon.className = `footer-floating-icon ${iconClasses[i % iconClasses.length]}`;
+            
+            // Random position, size, opacity and rotation
+            const top = Math.random() * 100;
+            const left = Math.random() * 100;
+            const size = Math.random() * 25 + 15; // Between 15px and 40px
+            const opacity = Math.random() * 0.15 + 0.05; // Between 0.05 and 0.2
+            const rotation = Math.random() * 360;
+            
+            // Apply styles
+            icon.style.top = `${top}%`;
+            icon.style.left = `${left}%`;
+            icon.style.fontSize = `${size}px`;
+            icon.style.opacity = opacity;
+            icon.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
+            
+            // Add animation with random delay
+            const delay = Math.random() * 5;
+            const duration = 3 + Math.random() * 4; // Between 3 and 7 seconds
+            icon.style.animation = `floatIcon ${duration}s ease-in-out ${delay}s infinite`;
+            
+            // Add to container
+            footerIconsContainer.appendChild(icon);
+        }
+    }
+    
+    // Animate footer heading
+    const footerHeading = document.querySelector('.footer-heading');
+    const headingUnderline = document.querySelector('.heading-underline');
+    
+    if (footerHeading && headingUnderline) {
+        // Create intersection observer for footer heading
+        const footerHeadingObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate the heading underline
+                    headingUnderline.style.animation = 'underlineExpand 0.8s ease-out forwards 0.5s';
+                    
+                    // Animate each letter in the heading
+                    const headingText = footerHeading.textContent;
+                    footerHeading.textContent = '';
+                    
+                    // Split the text and create spans for each letter
+                    [...headingText].forEach((letter, index) => {
+                        const span = document.createElement('span');
+                        span.textContent = letter;
+                        span.style.display = 'inline-block';
+                        span.style.opacity = '0';
+                        span.style.transform = 'translateY(20px)';
+                        span.style.animation = `letterFadeIn 0.5s forwards ${0.05 * index}s`;
+                        footerHeading.appendChild(span);
+                    });
+                    
+                    // Unobserve after animation
+                    footerHeadingObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        footerHeadingObserver.observe(footerHeading);
+    }
+    
+    // Contact form animation and functionality
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if (!name || !email || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Show success message (in real app, you'd send this data to a server)
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            submitBtn.style.backgroundColor = '#2ecc71';
+            
+            // Reset form after delay
+            setTimeout(() => {
+                contactForm.reset();
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.style.backgroundColor = '';
+            }, 3000);
         });
     }
     
-    if (cross && attributeCont) {
-        cross.addEventListener('click', () => {
-            attributeCont.style.top = "500px";
-            attributeCont.style.opacity = "0";
-            attributeCont.style.transform = "translateX(-50%) scale(0.8)";
+    // Attribute popup functionality
+    const attributeBtn = document.querySelector('.attribute-btn');
+    const attributePopup = document.querySelector('.attribute-popup');
+    const attributeClose = document.querySelector('.attribute-close');
+    
+    if (attributeBtn && attributePopup && attributeClose) {
+        attributeBtn.addEventListener('click', () => {
+            attributePopup.classList.add('active');
+        });
+        
+        attributeClose.addEventListener('click', () => {
+            attributePopup.classList.remove('active');
+        });
+        
+        // Close popup when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === attributePopup) {
+                attributePopup.classList.remove('active');
+            }
         });
     }
     

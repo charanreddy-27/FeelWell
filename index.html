@@ -319,56 +319,90 @@
 
     <a id="FOOTER"></a>
     <div class="footer">
-        <div class="footer-text-cont">
-            <div>
-                <h2>Get in touch.</h2>
-                <P>I would love to hear from you friend &#60;3</P>
+        <div class="footer-floating-icons-container">
+            <!-- Floating icons will be added via JavaScript -->
+        </div>
+        
+        <div class="footer-content-container">
+            <div class="footer-heading-container">
+                <h2 class="footer-heading">Let's <span class="accent-text">Connect</span></h2>
+                <div class="heading-underline"></div>
             </div>
-
-            <div class="author-contribution-cont">
-                <p class="attribute-text">Attribute to author</p>
-
-                <div class="actual-author-contribution-cont">
-                    <div class="attributes-head-cont">
-                        <p>
-                            I've Used some free images from Flaticon and freepik,
-                            So here is the attribute for the authors.
-                        </p>
-
-                        <i class="fas fa-times cross"></i>
+            
+            <div class="footer-main-content">
+                <div class="contact-form-container" data-aos="fade-right" data-aos-duration="800">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Your message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info-container" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="social-links-container">
+                        <h3>Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/charanreddy-27" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=charanreddychanda@gmail.com" target="_blank" class="social-link">
+                                <i class="far fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/chandacharanreddy/" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
-   
-                    <ul class="contribution-list">
-                        <li><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></li>
-                        <li><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></li>
-                        <li><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></li>
-                        <li><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></li>
-                        <li><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></li>
-                        <li><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></li>
-                        <li><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></li>
-                        <li><div>Icons made by <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></li>
-                        <li><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></li>
-                        <li><div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></li>
-                    </ul>
+                    
+                    <div class="contact-details">
+                        <h3>About FeelWell</h3>
+                        <p>FeelWell is dedicated to helping you improve your mental health through various activities, resources, and support.</p>
+                        <p>Feel free to reach out if you have any questions or suggestions!</p>
+                    </div>
+                    
+                    <div class="attribute-container">
+                        <button class="attribute-btn">Resource Credits</button>
+                        <div class="attribute-popup">
+                            <div class="attribute-popup-header">
+                                <h4>Attribution to Resources</h4>
+                                <i class="fas fa-times attribute-close"></i>
+                            </div>
+                            <div class="attribute-popup-content">
+                                <p>Icons and images used in this project are from:</p>
+                                <ul>
+                                    <li>Icons by <a href="https://www.freepik.com" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank">Flaticon</a></li>
+                                    <li>Icons by <a href="https://www.flaticon.com/authors/iconixar" target="_blank">iconixar</a> from <a href="https://www.flaticon.com/" target="_blank">Flaticon</a></li>
+                                    <li>Icons by <a href="https://www.flaticon.com/authors/smashicons" target="_blank">Smashicons</a> from <a href="https://www.flaticon.com/" target="_blank">Flaticon</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="social-icon-cont">
-            <div class="social-head">
+        
+        <div class="footer-bottom">
+            <div class="footer-logo-container">
                 <h2 class="logo footer-logo">FeelWell.</h2>
             </div>
-
-            <div class="icons">
-                <ul>
-                    <li><a href="https://github.com/charanreddy-27" target="_blank"><i class="fab fa-github-square"></i></a></li>
-                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=charanreddychanda@gmail.com" target="_blank"><i class="far fa-envelope"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/chandacharanreddy/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                </ul>
-            </div>
+            <p class="copyright">© <span id="current-year"></span> FeelWell. Take care of your mental health.</p>
         </div>
-
-        <p class="copy-rights">Thank You :)</p>
     </div>
  
     <!-- Back to top button -->
