@@ -1,12 +1,13 @@
 // +++++++++++++++++++++  LANDING PAGE ANIMATION ++++++++++++++++++++++++++
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS (Animate On Scroll) library
+    // Initialize AOS (Animate On Scroll) library with optimized settings
     AOS.init({
         duration: 800,
         easing: 'ease-in-out',
-        once: false,
-        mirror: true
+        once: true, // Set to true for better performance
+        mirror: false, // Set to false for better performance
+        disable: 'mobile' // Disable on mobile for better performance
     });
     // Initialize elements
     const girlIllustration = document.querySelector('.landing-illustration');

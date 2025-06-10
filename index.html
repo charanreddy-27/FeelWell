@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>FeelWell - Health Support Application</title>
     <meta name="description" content="FeelWell - A mental health support application to help you improve your wellbeing">
     
-    <script src="https://kit.fontawesome.com/1b2b6a64da.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+    <link rel="preconnect" href="https://unpkg.com">
     
+    <!-- CSS files -->
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
+    <!-- Favicon -->
     <link rel="icon" href="Images/B_icon01.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Deferred JavaScript for better page load performance -->
+    <script src="https://kit.fontawesome.com/1b2b6a64da.js" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
 </head>
 <body>
@@ -198,7 +205,7 @@
                 <div class="more-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="actual-card">
                         <div>
-                            <img src="Images/sleep.png" alt="sleep" width="50px" height="50px">
+                            <img src="Images/sleep.png" alt="sleep" width="50px" height="50px" loading="lazy">
                         </div>
                     </div>
 
@@ -209,7 +216,7 @@
                 
                 <div class="more-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="actual-card">
-                        <img src="Images/water-bottle.png" alt="hydration" width="50px" height="50px">
+                        <img src="Images/water-bottle.png" alt="hydration" width="50px" height="50px" loading="lazy">
                     </div>
 
                     <div class="more-card-content">
@@ -219,7 +226,7 @@
                 
                 <div class="more-card" data-aos="zoom-in" data-aos-delay="300">
                     <div class="actual-card">
-                        <img src="Images/sun.png" alt="sunshine" width="50px" height="50px">
+                        <img src="Images/sun.png" alt="sunshine" width="50px" height="50px" loading="lazy">
                     </div>
 
                     <div class="more-card-content">
@@ -229,7 +236,7 @@
                 
                 <div class="more-card" data-aos="zoom-in" data-aos-delay="400">
                     <div class="actual-card">
-                        <img src="Images/park 01.png" alt="outdoors" width="50px" height="50px">
+                        <img src="Images/park 01.png" alt="outdoors" width="50px" height="50px" loading="lazy">
                     </div>
 
                     <div class="more-card-content">
@@ -239,7 +246,7 @@
                 
                 <div class="more-card" data-aos="zoom-in" data-aos-delay="500">
                     <div class="actual-card">
-                        <img src="Images/laugh.png" alt="laugh" width="50px" height="50px">
+                        <img src="Images/laugh.png" alt="laugh" width="50px" height="50px" loading="lazy">
                     </div>
 
                     <div class="more-card-content">
@@ -249,7 +256,7 @@
                 
                 <div class="more-card" data-aos="zoom-in" data-aos-delay="600">
                     <div class="actual-card">
-                        <img src="Images/give-love.png" alt="gratitude" width="50px" height="50px">
+                        <img src="Images/give-love.png" alt="gratitude" width="50px" height="50px" loading="lazy">
                     </div>
 
                     <div class="more-card-content">
@@ -259,7 +266,7 @@
                 
                 <div class="more-card" data-aos="zoom-in" data-aos-delay="700">
                     <div class="actual-card">
-                        <img src="Images/bad-habits.png" alt="temptations" width="50px" height="50px">
+                        <img src="Images/bad-habits.png" alt="temptations" width="50px" height="50px" loading="lazy">
                     </div>
 
                     <div class="more-card-content">
@@ -301,7 +308,7 @@
             </div>
 
             <div class="take-page-img-cont" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-                <img src="Images/illustration/home-bot-img.png" alt="Chat Bot" class="chat-bot-img">
+                <img src="Images/illustration/home-bot-img.png" alt="Chat Bot" class="chat-bot-img" loading="lazy">
             </div>
         </div>
     </div>
@@ -369,8 +376,12 @@
         <i class="fas fa-arrow-up"></i>
     </a>
     
-    <script src="otherJS/hamberger.js"></script>
-    <script src="app.js"></script>
+    <!-- Loading scripts at the end for better performance -->
+    <script src="otherJS/hamberger.js" defer></script>
+    <script src="app.js" defer></script>
+    
+    <!-- Preload critical images -->
+    <link rel="preload" href="Images/illustration/girlIllustration0.5.png" as="image">
 </body>
 </html>
 

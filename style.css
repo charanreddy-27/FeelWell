@@ -72,6 +72,7 @@ p::selection{
     align-items: center;
     position: relative;
     z-index: 100;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 0 0 20px 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -89,6 +90,7 @@ p::selection{
     user-select: none;
     transition: var(--transition);
     position: relative;
+    will-change: transform;
 }
 
 .logo:hover {
@@ -413,11 +415,12 @@ p::selection{
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
     z-index: 1;
     box-shadow: var(--box-shadow);
+    will-change: transform;
 }
 
 .explore-btn::before, .blog-btn::before, .take-me-there-btn::before {
@@ -465,6 +468,7 @@ p::selection{
     width: 40%;
     height: 60%;
     animation: float 6s ease-in-out infinite;
+    will-change: transform;
 }
 
 @keyframes float {
@@ -723,10 +727,11 @@ p::selection{
     background-size: cover;
     background-position: center;
     box-shadow: var(--box-shadow);
-    transition: all 0.5s ease;
+    transition: var(--transition);
     opacity: 0;
     transform: translateY(30px);
     cursor: pointer;
+    will-change: transform, opacity;
 }
 
 .card::after {
@@ -737,7 +742,7 @@ p::selection{
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
-    transition: all 0.5s ease;
+    transition: var(--transition);
 }
 
 .card:hover,
@@ -758,7 +763,7 @@ p::selection{
     padding: 2em;
     z-index: 2;
     transform: translateY(10px);
-    transition: all 0.5s ease;
+    transition: var(--transition);
 }
 
 .card:hover .card-content-cont {
@@ -784,14 +789,14 @@ p::selection{
 .link-cont{
     display: inline-block;
     margin-top: 1em;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .card-text span a{
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     position: relative;
     padding-bottom: 2px;
 }
@@ -804,7 +809,7 @@ p::selection{
     width: 0;
     height: 2px;
     background: #fff;
-    transition: width 0.3s ease;
+    transition: var(--transition);
 }
 
 .card-text span a:hover::after {
@@ -813,7 +818,7 @@ p::selection{
 
 .arrow{
     margin-left: 0.5em;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .card:hover .arrow,
@@ -867,7 +872,8 @@ p::selection{
     align-items: center;
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.5s ease;
+    transition: var(--transition);
+    will-change: transform, opacity;
 }
 
 .appear {
@@ -884,7 +890,7 @@ p::selection{
     justify-content: center;
     align-items: center;
     box-shadow: var(--box-shadow);
-    transition: all 0.3s ease;
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
 }
@@ -926,7 +932,7 @@ p::selection{
 }
 
 .actual-card img {
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .actual-card:hover img {
@@ -1007,6 +1013,7 @@ p::selection{
     display: inline-flex;
     align-items: center;
     margin-top: 1em;
+    will-change: transform;
 }
 
 .take-me-there-btn:hover,
@@ -1017,7 +1024,7 @@ p::selection{
 
 .take-there-arrow{
     margin-left: 0.5em;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .take-me-there-btn:hover .take-there-arrow,
@@ -1054,7 +1061,7 @@ p::selection{
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
-    transition: all 0.5s ease;
+    transition: var(--transition);
     position: relative;
     z-index: 1;
 }
@@ -1143,7 +1150,7 @@ p::selection{
 .icons ul li a{
     font-size: 1.5em;
     color: var(--light-color);
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .icons ul li a:hover{
@@ -1167,7 +1174,7 @@ p::selection{
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     margin-top: 1em;
 }
 
@@ -1204,7 +1211,7 @@ p::selection{
     font-size: 1.5em;
     color: var(--dark-color);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .cross:hover {
@@ -1227,7 +1234,7 @@ p::selection{
 .contribution-list li{
     padding: 0.5em 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .contribution-list li:hover {
@@ -1238,7 +1245,7 @@ p::selection{
 .contribution-list li a{
     color: var(--primary-color);
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .contribution-list li a:hover{
@@ -1352,12 +1359,15 @@ p::selection{
 
 @keyframes pulse {
     0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
         box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
     }
     70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
         box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
     }
     100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
         box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
     }
 }
@@ -1379,7 +1389,7 @@ p::selection{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     z-index: 99;
     transform: translateY(20px);
 }
@@ -1397,4 +1407,60 @@ p::selection{
 
 .back-to-top i {
     font-size: 1.2em;
+}
+
+/* Cross-browser compatibility */
+.card, .more-card, .take-me-there-btn, .explore-btn, .blog-btn {
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes float {
+    0%, 100% {
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    50% {
+        -webkit-transform: translateY(-52%);
+        transform: translateY(-52%);
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+        box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+    }
 }

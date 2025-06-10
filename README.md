@@ -119,6 +119,111 @@ I believe that everyone deserves to live a balanced, healthy life, and FeelWell 
   Built with ❤️ for  <strong>mental well-being.</strong>
 </p>
 
+# FeelWell - Mental Health Support Application
+
+FeelWell is a web application designed to help users improve their mental health and overall wellbeing through various resources, tools, and information.
+
+![FeelWell Screenshot](Images/images_for_readme/screenshot.png)
+
+## Features
+
+- Mental health resources and information
+- Interactive chat bot for emotional support
+- Nutrition and exercise guidance
+- Fun activities to boost mood
+- Statistics and tracking tools
+
+## How to Run the Project
+
+### Option 1: Using a Local Web Server
+
+1. **Install a local web server** (if you don't have one already):
+   - For Node.js users: Install `http-server` globally
+     ```
+     npm install -g http-server
+     ```
+   - For Python users:
+     ```
+     # Python 3
+     python -m http.server
+     # Python 2
+     python -m SimpleHTTPServer
+     ```
+
+2. **Navigate to the project directory** in your terminal/command prompt:
+   ```
+   cd path/to/FeelWell
+   ```
+
+3. **Start the server**:
+   - With http-server:
+     ```
+     http-server
+     ```
+   - With Python:
+     ```
+     # Python 3
+     python -m http.server
+     # Python 2
+     python -m SimpleHTTPServer
+     ```
+
+4. **Open your browser** and go to:
+   - http-server: `http://localhost:8080`
+   - Python: `http://localhost:8000`
+
+### Option 2: Using VS Code Live Server
+
+1. Install the [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VS Code
+2. Open the project folder in VS Code
+3. Right-click on `index.html` and select "Open with Live Server"
+4. The application will open in your default browser
+
+### Option 3: Direct File Opening
+
+You can also simply open the `index.html` file directly in your browser:
+
+1. Navigate to the project folder
+2. Double-click on `index.html`
+3. The application will open in your default browser
+
+Note: Some features might not work correctly when opening the file directly due to browser security restrictions. Using a web server (Option 1 or 2) is recommended.
+
+## Browser Compatibility
+
+FeelWell is optimized for modern browsers:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Performance Optimizations
+
+The application includes several performance optimizations:
+- Lazy loading of images
+- Deferred loading of scripts
+- Optimized animations with will-change property
+- Preconnect to external domains
+- Preloading of critical resources
+
+## Project Structure
+
+- `index.html` - Main entry point
+- `style.css` - Main stylesheet
+- `app.js` - Main JavaScript file
+- `otherHTML/` - Additional HTML pages
+- `otherJS/` - Additional JavaScript files
+- `Images/` - Image assets
+- `RiveScripts/` - Scripts for the chat bot
+
+## Contributing
+
+If you'd like to contribute to this project, please fork the repository and create a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
 
 
 
