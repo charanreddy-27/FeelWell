@@ -346,18 +346,89 @@
         </div>
 
         <div class="start-today-section" data-aos="fade-up">
-            <h3>Ready to improve your mental health?</h3>
-            <p>Start with just 20 minutes a day of any physical activity you enjoy</p>
-            <a href="#" class="start-today-btn">Start Today <i class="fas fa-arrow-right"></i></a>
+            <h3>Ready to Get Started?</h3>
+            <p>Begin your exercise journey today with these simple steps</p>
+            <div class="start-steps">
+                <div class="step-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <h4>Start Small</h4>
+                    <p>Begin with just 5-10 minutes of activity daily and gradually increase</p>
+                </div>
+                <div class="step-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <h4>Find What You Enjoy</h4>
+                    <p>Choose activities you actually like doing to stay motivated</p>
+                </div>
+                <div class="step-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <h4>Be Consistent</h4>
+                    <p>Aim for regular exercise rather than occasional intense workouts</p>
+                </div>
+                <div class="step-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="step-number">4</div>
+                    <h4>Track Your Progress</h4>
+                    <p>Keep a journal of your activities and how they make you feel</p>
+                </div>
+            </div>
+            <a href="https://www.nhs.uk/live-well/exercise/" target="_blank" class="start-today-btn">Learn More About Exercise <i class="fas fa-external-link-alt"></i></a>
         </div>
     </div>
 
     <a id="FOOTER"></a>
-    <!-- Footer will be included from the main page -->
+    <footer class="footer">
+        <div class="footer-content-container">
+            <div class="footer-heading-container">
+                <h2 class="footer-heading">Get in <span class="accent-text">Touch</span></h2>
+                <div class="heading-underline"></div>
+            </div>
+            
+            <div class="footer-main-content">
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info-container">
+                    <div class="social-links-container">
+                        <h3>Connect With Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i> <span>Facebook</span></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i> <span>Twitter</span></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i> <span>Instagram</span></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i> <span>LinkedIn</span></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> info@feelwell.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Wellness St, Health City</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-logo">FeelWell.</div>
+            <p class="copyright">&copy; 2023 FeelWell. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    <script src="../otherJS/hamberger.js" defer></script>
-    <script src="../otherJS/food&exercise.js" defer></script>
-    <script src="../otherJS/footer.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize AOS
@@ -367,41 +438,58 @@
                 once: true,
                 mirror: false
             });
-            
+
             // Create particles for background animation
-            createParticles();
-            
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        });
-        
-        function createParticles() {
             const particlesContainer = document.querySelector('.particles-container');
-            const particleCount = 50;
+            const particleCount = 20;
             
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
                 
-                // Random position, size and animation delay
-                const size = Math.random() * 5 + 2;
+                // Random size between 5px and 15px
+                const size = Math.random() * 10 + 5;
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
+                
+                // Random position
                 particle.style.left = `${Math.random() * 100}%`;
                 particle.style.top = `${Math.random() * 100}%`;
-                particle.style.animationDelay = `${Math.random() * 5}s`;
-                particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                
+                // Random animation delay
+                particle.style.animationDelay = `${Math.random() * 15}s`;
                 
                 particlesContainer.appendChild(particle);
             }
-        }
+
+            // Mobile Navigation Toggle
+            const hamBurger = document.querySelector('.hamBurger');
+            const mobileNav = document.getElementById('mobile-nav');
+            const line1 = document.querySelector('.line1');
+            const line3 = document.querySelector('.line3');
+            const midLine1 = document.querySelector('.mid-line1');
+            const midLine2 = document.querySelector('.mid-line2');
+
+            hamBurger.addEventListener('click', function() {
+                mobileNav.classList.toggle('show-nav');
+                line1.classList.toggle('changetheline1');
+                line3.classList.toggle('changetheline3');
+                midLine1.classList.toggle('changeMidLine1');
+                midLine2.classList.toggle('changeMidLine2');
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = document.querySelectorAll('.mobile-view-list');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileNav.classList.remove('show-nav');
+                    line1.classList.remove('changetheline1');
+                    line3.classList.remove('changetheline3');
+                    midLine1.classList.remove('changeMidLine1');
+                    midLine2.classList.remove('changeMidLine2');
+                });
+            });
+        });
     </script>
 </body>
 </html>

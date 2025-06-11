@@ -248,15 +248,15 @@
                         <div class="food-tag">Probiotics • Protein • Calcium</div>
                         <p>
                             Yogurt and other products containing active cultures are excellent sources of probiotics. 
-                            Often associated with digestive health, probiotics have been shown to play a role in reducing stress and anxiety.
-
-                            Yogurt can also provide you with potassium and magnesium, which helps oxygen reach the brain,
-                             further improving its ability to function.
+                            The gut-brain connection is well-established, and a healthy gut microbiome can positively 
+                            influence your mood and mental health.
+                            
+                            Regular consumption of probiotic foods has been linked to reduced symptoms of depression and anxiety.
                         </p>
                         <div class="food-benefits">
-                            <span><i class="fas fa-check-circle"></i> Reduces stress</span>
                             <span><i class="fas fa-check-circle"></i> Improves gut health</span>
-                            <span><i class="fas fa-check-circle"></i> Brain oxygenation</span>
+                            <span><i class="fas fa-check-circle"></i> Reduces anxiety</span>
+                            <span><i class="fas fa-check-circle"></i> Stabilizes mood</span>
                         </div>
                     </div>
                 </div>
@@ -382,18 +382,94 @@
         </div>
 
         <div class="meal-plan-section" data-aos="fade-up">
-            <h3>Ready to improve your mental health through nutrition?</h3>
-            <p>Get a personalized meal plan designed to boost your mood and cognitive function</p>
-            <a href="#" class="meal-plan-btn">Get Meal Plan <i class="fas fa-arrow-right"></i></a>
+            <h3>Ready to Improve Your Diet?</h3>
+            <p>Start with these simple nutrition tips for better mental health</p>
+            
+            <div class="nutrition-tips">
+                <div class="tip-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="tip-icon"><i class="fas fa-utensils"></i></div>
+                    <h4>Balanced Meals</h4>
+                    <p>Include protein, healthy fats, and complex carbs in each meal to stabilize blood sugar and mood</p>
+                </div>
+                
+                <div class="tip-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="tip-icon"><i class="fas fa-apple-alt"></i></div>
+                    <h4>Whole Foods</h4>
+                    <p>Choose unprocessed foods over packaged items for maximum nutritional benefits</p>
+                </div>
+                
+                <div class="tip-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="tip-icon"><i class="fas fa-tint"></i></div>
+                    <h4>Stay Hydrated</h4>
+                    <p>Even mild dehydration can affect mood and cognitive function</p>
+                </div>
+                
+                <div class="tip-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="tip-icon"><i class="fas fa-clock"></i></div>
+                    <h4>Regular Timing</h4>
+                    <p>Eat at consistent times to maintain energy levels and prevent mood swings</p>
+                </div>
+            </div>
+            
+            <a href="https://www.mind.org.uk/information-support/tips-for-everyday-living/food-and-mood/about-food-and-mood/" target="_blank" class="meal-plan-btn">Learn More About Nutrition <i class="fas fa-external-link-alt"></i></a>
         </div>
     </div>
 
     <a id="FOOTER"></a>
-    <!-- Footer will be included from the main page -->
+    <footer class="footer">
+        <div class="footer-content-container">
+            <div class="footer-heading-container">
+                <h2 class="footer-heading">Get in <span class="accent-text">Touch</span></h2>
+                <div class="heading-underline"></div>
+            </div>
+            
+            <div class="footer-main-content">
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info-container">
+                    <div class="social-links-container">
+                        <h3>Connect With Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i> <span>Facebook</span></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i> <span>Twitter</span></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i> <span>Instagram</span></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i> <span>LinkedIn</span></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> info@feelwell.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Wellness St, Health City</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-logo">FeelWell.</div>
+            <p class="copyright">&copy; 2023 FeelWell. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    <script src="../otherJS/hamberger.js" defer></script>
-    <script src="../otherJS/food&exercise.js" defer></script>
-    <script src="../otherJS/footer.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize AOS
@@ -403,57 +479,60 @@
                 once: true,
                 mirror: false
             });
-            
-            // Create floating food icons
-            createFoodIcons();
-            
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        });
-        
-        function createFoodIcons() {
+
+            // Create food icons for background animation
             const foodIconsContainer = document.querySelector('.food-icons-container');
-            const foodIcons = [
-                'fas fa-apple-alt',
-                'fas fa-carrot',
-                'fas fa-fish',
-                'fas fa-egg',
-                'fas fa-bread-slice',
-                'fas fa-cheese',
-                'fas fa-lemon',
-                'fas fa-pepper-hot',
-                'fas fa-seedling',
-                'fas fa-leaf'
-            ];
-            
+            const foodIcons = ['🥑', '🥦', '🍎', '🍇', '🥕', '🍓', '🍋', '🥜', '🍚', '🥗'];
             const iconCount = 20;
             
             for (let i = 0; i < iconCount; i++) {
-                const icon = document.createElement('i');
-                // Random icon from the array
-                icon.className = `food-icon ${foodIcons[i % foodIcons.length]}`;
+                const foodIcon = document.createElement('div');
+                foodIcon.classList.add('food-icon');
+                foodIcon.textContent = foodIcons[Math.floor(Math.random() * foodIcons.length)];
                 
-                // Random position, size and animation delay
-                const size = Math.random() * 20 + 10;
-                const top = Math.random() * 100;
-                const left = Math.random() * 100;
+                // Random size between 20px and 40px
+                const size = Math.random() * 20 + 20;
+                foodIcon.style.fontSize = `${size}px`;
                 
-                icon.style.fontSize = `${size}px`;
-                icon.style.top = `${top}%`;
-                icon.style.left = `${left}%`;
-                icon.style.animationDelay = `${Math.random() * 5}s`;
-                icon.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                // Random position
+                foodIcon.style.left = `${Math.random() * 100}%`;
+                foodIcon.style.top = `${Math.random() * 100}%`;
                 
-                foodIconsContainer.appendChild(icon);
+                // Random animation delay and duration
+                foodIcon.style.animationDelay = `${Math.random() * 15}s`;
+                foodIcon.style.animationDuration = `${15 + Math.random() * 15}s`;
+                
+                foodIconsContainer.appendChild(foodIcon);
             }
-        }
+
+            // Mobile Navigation Toggle
+            const hamBurger = document.querySelector('.hamBurger');
+            const mobileNav = document.getElementById('mobile-nav');
+            const line1 = document.querySelector('.line1');
+            const line3 = document.querySelector('.line3');
+            const midLine1 = document.querySelector('.mid-line1');
+            const midLine2 = document.querySelector('.mid-line2');
+
+            hamBurger.addEventListener('click', function() {
+                mobileNav.classList.toggle('show-nav');
+                line1.classList.toggle('changetheline1');
+                line3.classList.toggle('changetheline3');
+                midLine1.classList.toggle('changeMidLine1');
+                midLine2.classList.toggle('changeMidLine2');
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = document.querySelectorAll('.mobile-view-list');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileNav.classList.remove('show-nav');
+                    line1.classList.remove('changetheline1');
+                    line3.classList.remove('changetheline3');
+                    midLine1.classList.remove('changeMidLine1');
+                    midLine2.classList.remove('changeMidLine2');
+                });
+            });
+        });
     </script>
 </body>
 </html>
