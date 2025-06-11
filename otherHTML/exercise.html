@@ -376,56 +376,89 @@
 
     <a id="FOOTER"></a>
     <footer class="footer">
+        <div class="footer-floating-icons-container">
+            <!-- Floating icons will be added via JavaScript -->
+        </div>
+        
         <div class="footer-content-container">
             <div class="footer-heading-container">
-                <h2 class="footer-heading">Get in <span class="accent-text">Touch</span></h2>
+                <h2 class="footer-heading">Let's <span class="accent-text">Connect</span></h2>
                 <div class="heading-underline"></div>
             </div>
             
             <div class="footer-main-content">
-                <div class="contact-form-container">
+                <div class="contact-form-container" data-aos="fade-right" data-aos-duration="800">
                     <form class="contact-form">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" placeholder="Your Name">
+                            <input type="text" id="name" placeholder="Your name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Your Email">
+                            <input type="email" id="email" placeholder="Your email" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" placeholder="Your Message"></textarea>
+                            <textarea id="message" placeholder="Your message" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">
-                            Send Message <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
                 </div>
                 
-                <div class="contact-info-container">
+                <div class="contact-info-container" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                     <div class="social-links-container">
-                        <h3>Connect With Us</h3>
+                        <h3>Connect With Me</h3>
                         <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i> <span>Facebook</span></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i> <span>Twitter</span></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i> <span>Instagram</span></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i> <span>LinkedIn</span></a>
+                            <a href="https://github.com/charanreddy-27" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=charanreddychanda@gmail.com" target="_blank" class="social-link">
+                                <i class="far fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/chandacharanreddy/" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
                         </div>
                     </div>
                     
                     <div class="contact-details">
-                        <p><i class="fas fa-envelope"></i> info@feelwell.com</p>
-                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Wellness St, Health City</p>
+                        <h3>About FeelWell</h3>
+                        <p>FeelWell is dedicated to helping you improve your mental health through various activities, resources, and support.</p>
+                        <p>Feel free to reach out if you have any questions or suggestions!</p>
+                    </div>
+                    
+                    <div class="attribute-container">
+                        <button class="attribute-btn">Resource Credits</button>
+                        <div class="attribute-popup">
+                            <div class="attribute-popup-header">
+                                <h4>Attribution to Resources</h4>
+                                <i class="fas fa-times attribute-close"></i>
+                            </div>
+                            <div class="attribute-popup-content">
+                                <p>Icons and images used in this project are from:</p>
+                                <ul>
+                                    <li>Icons by <a href="https://www.freepik.com" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank">Flaticon</a></li>
+                                    <li>Icons by <a href="https://www.flaticon.com/authors/iconixar" target="_blank">iconixar</a> from <a href="https://www.flaticon.com/" target="_blank">Flaticon</a></li>
+                                    <li>Icons by <a href="https://www.flaticon.com/authors/smashicons" target="_blank">Smashicons</a> from <a href="https://www.flaticon.com/" target="_blank">Flaticon</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <div class="footer-logo">FeelWell.</div>
-            <p class="copyright">&copy; 2023 FeelWell. All Rights Reserved.</p>
+            <div class="footer-logo-container">
+                <h2 class="logo footer-logo">FeelWell.</h2>
+            </div>
+            <p class="copyright">© <span id="current-year"></span> FeelWell. Take care of your mental health.</p>
         </div>
     </footer>
 
@@ -489,6 +522,49 @@
                     midLine2.classList.remove('changeMidLine2');
                 });
             });
+            
+            // Create footer floating icons
+            const footerIconsContainer = document.querySelector('.footer-floating-icons-container');
+            const footerIcons = ['🧠', '❤️', '😊', '🌱', '🌞', '✨', '🍃', '🌈', '🌟', '💫'];
+            const footerIconCount = 15;
+            
+            for (let i = 0; i < footerIconCount; i++) {
+                const icon = document.createElement('div');
+                icon.classList.add('footer-floating-icon');
+                icon.textContent = footerIcons[Math.floor(Math.random() * footerIcons.length)];
+                
+                // Random position
+                icon.style.left = `${Math.random() * 100}%`;
+                icon.style.top = `${Math.random() * 100}%`;
+                
+                // Random size
+                const size = Math.random() * 20 + 15;
+                icon.style.fontSize = `${size}px`;
+                
+                // Random animation
+                icon.style.animationDuration = `${15 + Math.random() * 15}s`;
+                icon.style.animationDelay = `${Math.random() * 5}s`;
+                
+                footerIconsContainer.appendChild(icon);
+            }
+            
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Resource credits popup
+            const attributeBtn = document.querySelector('.attribute-btn');
+            const attributePopup = document.querySelector('.attribute-popup');
+            const attributeClose = document.querySelector('.attribute-close');
+            
+            if (attributeBtn && attributePopup && attributeClose) {
+                attributeBtn.addEventListener('click', function() {
+                    attributePopup.classList.add('active');
+                });
+                
+                attributeClose.addEventListener('click', function() {
+                    attributePopup.classList.remove('active');
+                });
+            }
         });
     </script>
 </body>
