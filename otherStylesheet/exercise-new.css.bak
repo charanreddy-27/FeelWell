@@ -1,0 +1,886 @@
+/* Exercise Page Styling */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --light-color: #f7fafc;
+    --dark-color: #1c2b2d;
+    --gradient-bg: linear-gradient(135deg, #3498db, #2ecc71);
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Landing Section */
+.land-cont {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(28, 43, 45, 0.7), rgba(28, 43, 45, 0.7)), url('../Images/exercise-page-img/exercise-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.land-img-cont {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Particles Animation */
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: float 15s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-100px) translateX(100px);
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.8;
+    }
+}
+
+.exercise-page-head {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.exercise-page-head h2 {
+    font-size: 2.5rem;
+    color: var(--light-color);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.exercise-page-head span {
+    color: var(--primary-color);
+    position: relative;
+    font-weight: 700;
+}
+
+.animated-underline {
+    height: 3px;
+    width: 0;
+    background: var(--gradient-bg);
+    margin: 1rem auto;
+    animation: expandWidth 1.5s ease-out forwards 0.5s;
+}
+
+@keyframes expandWidth {
+    to { width: 50%; }
+}
+
+.scroll-down-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light-color);
+    text-decoration: none;
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    transition: var(--transition);
+    animation: pulse 2s infinite;
+}
+
+.scroll-down-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.scroll-down-btn i {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+/* Section 2 Styling */
+.section-2 {
+    padding: 5rem 2rem;
+    background-color: var(--light-color);
+}
+
+.section-2-para {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.section-2-para p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+}
+
+/* Benefits Grid */
+.benefits-container {
+    max-width: 1000px;
+    margin: 0 auto 5rem;
+    text-align: center;
+}
+
+.benefits-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+    position: relative;
+    display: inline-block;
+}
+
+.benefits-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gradient-bg);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-bg);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover::before {
+    transform: scaleX(1);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.benefit-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.benefit-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Exercise List Section */
+.whole-exercise-div {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.exercise-list-head {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.exercise-list-head h2 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.exercise-list-head span {
+    color: var(--primary-color);
+}
+
+.list-of-exercise {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.exercise-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.exercise-cont.rev {
+    direction: rtl;
+}
+
+.exercise-cont.rev .exercise-desp {
+    direction: ltr;
+}
+
+.container-img {
+    height: 400px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.container-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.exercise-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+    transition: height 0.3s ease;
+    opacity: 0;
+}
+
+.container-img:hover .exercise-overlay {
+    height: 50%;
+    opacity: 1;
+}
+
+.overlay-content {
+    color: white;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.container-img:hover .overlay-content {
+    transform: translateY(0);
+}
+
+.overlay-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.img-1 {
+    background-image: url('../Images/exercise-page-img/running.jpg');
+}
+
+.img-2 {
+    background-image: url('../Images/exercise-page-img/pilates.jpg');
+}
+
+.img-3 {
+    background-image: url('../Images/exercise-page-img/yoga.jpg');
+}
+
+.img-4 {
+    background-image: url('../Images/exercise-page-img/swimming.jpg');
+}
+
+.img-5 {
+    background-image: url('../Images/exercise-page-img/cycling.jpg');
+}
+
+.img-6 {
+    background-image: url('../Images/exercise-page-img/dancing.jpg');
+}
+
+.img-7 {
+    background-image: url('../Images/exercise-page-img/boxing.jpg');
+}
+
+.exercise-desp {
+    padding: 1rem;
+}
+
+.exercise-desp h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+    position: relative;
+    display: inline-block;
+}
+
+.exercise-desp h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.exercise-desp:hover h2::after {
+    width: 100%;
+}
+
+.exercise-tag {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.exercise-desp p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.exercise-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.exercise-benefits span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.exercise-benefits i {
+    color: var(--secondary-color);
+}
+
+/* Start Today Section */
+.start-today-section {
+    background: linear-gradient(rgba(28, 43, 45, 0.8), rgba(28, 43, 45, 0.8)), url('../Images/exercise-page-img/start-today-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+    text-align: center;
+    color: var(--light-color);
+    margin-top: 4rem;
+}
+
+.start-today-section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.start-today-section p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Step Cards */
+.start-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+.step-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.step-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.2);
+    line-height: 1;
+}
+
+.step-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.step-card p {
+    font-size: 1rem;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Back to Home Link */
+.back-to-home {
+    padding: 1.5rem 2rem;
+}
+
+.back-to-home a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.back-to-home a:hover {
+    transform: translateX(-5px);
+}
+
+.back-to-home-arrow {
+    margin-right: 0.5rem;
+    transition: var(--transition);
+}
+
+/* Exercise Landing Section */
+.whole-exercise-cont {
+    position: relative;
+}
+
+.exercise-landing-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+.exercise-landing-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.exercise-main-heading {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.exercise-subtitle {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.exercise-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.explore-exercises-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--gradient-bg);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.explore-exercises-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+.explore-exercises-btn i {
+    transition: var(--transition);
+}
+
+.explore-exercises-btn:hover i {
+    transform: translateX(5px);
+}
+
+.exercise-landing-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exercise-landing-image img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.exercise-landing-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 5rem 2rem;
+    background-color: var(--light-color);
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-color);
+    position: relative;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--gradient-bg);
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-bg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+}
+
+.benefit-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.benefit-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .exercise-landing-section {
+        flex-direction: column;
+    }
+    
+    .exercise-landing-content {
+        padding-right: 0;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    
+    .exercise-main-heading {
+        font-size: 2.5rem;
+    }
+    
+    .exercise-landing-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .start-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .exercise-main-heading {
+        font-size: 2.2rem;
+    }
+    
+    .exercise-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .section-heading {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .exercise-main-heading {
+        font-size: 1.8rem;
+    }
+    
+    .exercise-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-heading {
+        font-size: 1.8rem;
+    }
+    
+    .start-today-section h3 {
+        font-size: 1.8rem;
+    }
+    
+    .start-today-section p {
+        font-size: 1rem;
+    }
+    
+    .start-today-btn {
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Make sure all containers respect the viewport width */
+.whole-exercise-cont,
+.exercise-landing-section,
+.benefits-section,
+.exercise-types-section,
+.start-today-section,
+.exercise-types-container,
+.exercise-cont,
+.benefits-container,
+.start-steps {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Ensure images don't overflow their containers */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure exercise containers stack properly on small screens */
+@media (max-width: 768px) {
+    .exercise-cont {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .exercise-cont.rev {
+        direction: ltr;
+    }
+    
+    .container-img {
+        height: 300px;
+    }
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Make sure all containers respect the viewport width */
+.whole-exercise-cont,
+.exercise-landing-section,
+.benefits-section,
+.exercise-types-section,
+.start-today-section,
+.exercise-types-container,
+.exercise-cont,
+.benefits-container,
+.start-steps {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Ensure images don't overflow their containers */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure exercise containers stack properly on small screens */
+@media (max-width: 768px) {
+    .exercise-cont {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .exercise-cont.rev {
+        direction: ltr;
+    }
+    
+    .container-img {
+        height: 300px;
+    }
+} 
+ 
+ / *   P r e v e n t   h o r i z o n t a l   s c r o l l i n g   * / 
+ 
+ h t m l ,   b o d y   { 
+ 
+         m a x - w i d t h :   1 0 0 % ; 
+ 
+         o v e r f l o w - x :   h i d d e n ; 
+ 
+         o v e r f l o w - x :   h i d d e n ; 
+ 
+ } 
+ 
+ 
+ 
+ / *   M a k e   s u r e   a l l   c o n t a i n e r s   r e s p e c t   t h e   v i e w p o r t   w i d t h   * / 
+ 
+ . w h o l e - e x e r c i s e - c o n t , 
+ 
+ . e x e r c i s e - l a n d i n g - s e c t i o n , 
+ 
+ . b e n e f i t s - s e c t i o n , 
+ 
+ . b e n e f i t s - s e c t i o n , 
+ 
+ . s t a r t - t o d a y - s e c t i o n , 
+ 
+ . e x e r c i s e - c o n t , 
+ 
+ . b e n e f i t s - c o n t a i n e r , 
+ 
+ . s t a r t - s t e p s   { 
+ 
+         m a x - w i d t h :   1 0 0 % ; 
+ 
+         b o x - s i z i n g :   b o r d e r - b o x ; 
+ 
+         p a d d i n g - l e f t :   1 r e m ; 
+ 
+         p a d d i n g - r i g h t :   1 r e m ; 
+ 
+         p a d d i n g - r i g h t :   1 r e m ; 
+ 
+ } 
+ 
+ 
+ 
+ / *   E n s u r e   i m a g e s   d o n ' t   o v e r f l o w   t h e i r   c o n t a i n e r s   * / 
+ 
+ i m g   { 
+ 
+         m a x - w i d t h :   1 0 0 % ; 
+ 
+         h e i g h t :   a u t o ; 
+ 
+ } 
+ 
+ 
